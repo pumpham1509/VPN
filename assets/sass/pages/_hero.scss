@@ -1,0 +1,45 @@
+.hero{
+    padding-bottom: 10rem;
+    &__container{
+        display: flex;
+        align-items: center;
+    }
+    &__content{
+        max-width: 55.5rem;
+    }
+    &__desciption{
+        line-height: 3rem;
+        font-size: 1.6rem;
+        margin-bottom: 5rem;
+    }
+    &__image{
+        transform: translateX(4rem);
+    }
+
+
+    @media screen and (max-width: 1400px){
+        &__image{
+            transform: translateX(0);
+        }
+    }
+    @media screen and (max-width: 1023px){
+        &__desciption{
+            margin-bottom: 3rem;
+        }
+    }
+    @media screen and (max-width: 992px) {
+		&__image {
+			transform: none;
+		}
+	}
+    @media screen and (max-width: 767px) {
+        padding-bottom: 7rem;
+		&__container{
+            flex-direction: column-reverse;
+            gap: 2rem 0;
+        }
+        &__desciption{
+            margin-bottom: 2.5rem;
+        }
+	}
+}

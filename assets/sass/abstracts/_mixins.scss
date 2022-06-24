@@ -1,0 +1,24 @@
+@mixin headding($fontSize: inherit, $lineHeight: normal, $align: start) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    text-align: $align;
+}
+
+@mixin button($padding-x, $padding-y, $borderRadius) {
+    padding: $padding-x $padding-y;
+    border-radius: $borderRadius;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 90%;
+        height: 50%;
+        border-radius: $borderRadius;
+        background-color: $main-color;
+        filter: blur(2.4rem);
+        z-index: -1;
+        transform: translate(-50%, 100%);
+    }
+}
+

@@ -1,0 +1,14 @@
+.button{
+    color: $text-color-white;
+    font-weight: $font-w-500;
+    font-size: 1.6rem;
+    background-color: $main-color;
+    display: inline-block;
+    position: relative;
+    &--big{
+        @include button(1.8rem, 7.8rem, 1rem);
+    }
+    &--small{
+        @include button(1.3rem, 6rem, 5rem)
+    }
+}
